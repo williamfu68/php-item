@@ -73,6 +73,22 @@ class BookInfoController extends Controller
             return '该条数据已删除，请返回后刷新！';
         }
     } 
+    public function cancelAllCustomerBookInfo(Request $request) {
+        $res = DB::delete('delete * from customerBookInfo');
+        if($res) {
+            return '已删除所有数据，请返回后刷新！';
+        } else {
+            return '所有数据已删除，请返回后刷新！';
+        }
+    } 
+    public function cancelAllMemberBookInfo(Request $request) {
+        DB::delete('delete * from memberBookInfo');
+        if($res) {
+            return '已删除所有数据，请返回后刷新！';
+        } else {
+            return '所有数据已删除，请返回后刷新！';
+        }
+    } 
     public function cancelMemberBookInfo(Request $request) {
         $id = $request->id;
         // Log::info($id);

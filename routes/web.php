@@ -82,6 +82,7 @@ Route::get('/queryCustomerInfo','CustomerInfoController@query');
 Route::get('/allCustomerInfo','CustomerInfoController@all');
 Route::get('/updateCheckOutTime','CustomerInfoController@update');
 Route::get('/deleteCustomerInfo','CustomerInfoController@delete');
+Route::get('/deleteAllCustomerInfo','CustomerInfoController@deleteAll');
 Route::get('/queryHousingRoomInfo','CustomerInfoController@queryHousingRoomInfo');
 Route::get('/customerInfoList',function() {
     return view('customerInfoList');
@@ -92,12 +93,14 @@ Route::get('/allRoomInfo','RoomInfoController@all');
 Route::get('/queryEmptyRoomInfo','RoomInfoController@queryEmptyRoomInfo');
 Route::get('/addRoomInfo','RoomInfoController@add');
 Route::get('/deleteRoomInfo','RoomInfoController@delete');
+Route::get('/deleteAllRoomInfo','RoomInfoController@deleteAll');
 Route::get('/alterRoomInfo','RoomInfoController@alter');
 // memberInfo
 Route::get('/registerMember','MemberInfoController@register');
 Route::get('/queryMemberInfo','MemberInfoController@query');
 Route::get('/alterMemberInfo','MemberInfoController@alter');
 Route::get('/deleteMemberInfo','MemberInfoController@delete');
+Route::get('/deleteAllMemberInfo','MemberInfoController@deleteAll');
 Route::get('/allMemberInfo','MemberInfoController@all');
 // bookInfo
 Route::get('/customerBookInfo','BookInfoController@customerBook');
@@ -105,7 +108,9 @@ Route::get('/memberBookInfo','BookInfoController@memberBook');
 Route::get('/queryCustomerBookInfo','BookInfoController@customerQuery');
 Route::get('/queryMemberBookInfo','BookInfoController@memberQuery');
 Route::get('/cancelCustomerBookInfo','BookInfoController@cancelCustomerBookInfo');
+Route::get('/cancelAllCustomerBookInfo','BookInfoController@cancelAllCustomerBookInfo');
 Route::get('/cancelMemberBookInfo','BookInfoController@cancelMemberBookInfo');
+Route::get('/cancelAllMemberBookInfo','BookInfoController@cancelAllMemberBookInfo');
 Route::get('/allCustomerBookInfo','BookInfoController@allCustomerBookInfo');
 Route::get('/allMemberBookInfo','BookInfoController@allMemberBookInfo');
 // personalInfo
@@ -119,9 +124,11 @@ Route::get('/alterAdminPersonalInfo','PersonalInfoController@alterAdmin');
 Route::get('/addBusinessRecordInfo','BusinessRecordController@add');
 Route::get('/manageBusinessRecord','BusinessRecordController@manage');
 Route::get('/deleteBusinessRecordInfo','BusinessRecordController@delete');
+Route::get('/deleteAllBusinessRecordInfo','BusinessRecordController@deleteAll');
 // userInfo
 Route::get('/queryUserInfo','UserInfoController@query');
 Route::get('/deleteUserInfo','UserInfoController@delete');
+Route::get('/deleteAllUserInfo','UserInfoController@deleteAll');
 
 
 

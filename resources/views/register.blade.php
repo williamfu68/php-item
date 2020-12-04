@@ -80,10 +80,10 @@
                                     <small class = "text-muted">用户名长度4-16位，可以包含大小写字母、数字、汉字和英文下划线</small>
                                     <input type="text"name="userName" id="userName" class = "form-control  form-control-sm" style = "width:80%" value = "{{old('userName')}}"  required pattern="^([\u4e00-\u9fa5]{2,4})|([A-Za-z0-9_]{4,16})|([a-zA-Z0-9_\u4e00-\u9fa5]{3,16})$"> 
 
-                                    <div class="form-group">
+                                <div class="form-group">
                                     <label for="pwd">密码:</label>
                                     <small class = "text-muted">密码长度6-16位，可以包含大小写字母、数字和英文下划线</small>
-                                    <input type="password"name="pwd" id="pwd1" class = "form-control  form-control-sm" style = "width:80%" required pattern="^[\w_-]{6,16}$"
+                                    <input type="password"name="pwd" id="pwd1" class = "form-control  form-control-sm" style = "width:80%" required pattern="^[\w_-]{6,16}$" value = "{{old('pwd')}}"
                                     > 
                                     <svg class="bi bi-eye-slash" width="1em" height=".9em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style = "position: absolute;top:108px;">
                                         <path d="M13.359 11.238C15.06 9.72 16 8 16 8s-3-5.5-8-5.5a7.028 7.028 0 0 0-2.79.588l.77.771A5.944 5.944 0 0 1 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.134 13.134 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755-.165.165-.337.328-.517.486l.708.709z"/>
@@ -96,31 +96,33 @@
                                         <path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
                                       </svg>
 
-                                    <div class="form-group">
-                                        <label for="sex">性别:</label>
-                                        <small class = "text-muted">男/女</small>
-                                        <input type="text" class = "form-control form-control-sm" style = "width:80%" name="sex" id="sex" required pattern = "^[\u4e00-\u9fa5]{0,}$">
-                                    <div class="form-group">
-                                        <label for="age">年龄:</label>
-                                        <small class = "text-muted">只能由数字组成</small>
-                                        <input type="text" class = "form-control form-control-sm" style = "width:80%" name="age" id="age" required pattern = "^[1-9]\d*$">
-                                    <div class="form-group">
-                                        <label for="email">邮箱:</label>
-                                        <small class = "text-muted">username@domain.com</small>
-                                        <input type="text" class = "form-control form-control-sm" style = "width:80%" name="email" id="email" required pattern = "^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$">
-
-                                    <div class="form-group">
+                                <div class="form-group">
+                                    <label for="sex">性别:</label>
+                                    <small class = "text-muted">男/女</small>
+                                    <input type="text" class = "form-control form-control-sm" style = "width:80%" name="sex" id="sex" required pattern = "^[\u4e00-\u9fa5]{0,}$" value = "{{old('sex')}}"> 
+                                
+                                <div class="form-group">
+                                    <label for="age">年龄:</label>
+                                    <small class = "text-muted">只能由数字组成</small>
+                                    <input type="text" class = "form-control form-control-sm" style = "width:80%" name="age" id="age" required pattern = "^[1-9]\d*$" value = "{{old('age')}}">
+                                
+                                <div class="form-group">
+                                    <label for="email">邮箱:</label>
+                                    <small class = "text-muted">username@domain.com</small>
+                                    <input type="text" class = "form-control form-control-sm" style = "width:80%" name="email" id="email" required pattern = "^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$" value = "{{old('email')}}">
+                                
+                                <div class="form-group">
                                     <label for="captcha">验证码:</label>
                                     <small class = "text-muted">用于区分人和机器</small>
                                     <canvas width="150" height="45" id="captcha1"></canvas> 
                                     <input type="text" name="captcha" id="captchaInput1" class = "form-control  form-control-sm" style = "width:35%;margin-left:50px" value = "{{old('captcha')}}" required > 
-                                    
-                                    <a href="javascript:;" id = "anchor1"><small class = "text-muted">看不清?点我</small></a>
 
-                                    <small class = "text-muted"><span id = "hint1"></span> </small>
-                                    <img src="" id = "img1">
-                                    <p style = "text-align:center;margin-top:18px;"><button type = "submit" class = "btn btn-outline-primary"  style = "width:50%" id = "btn1">注册</button></p>         
-                                </div> 
+                                <a href="javascript:;" id = "anchor1"><small class = "text-muted">看不清?点我</small></a>
+
+                                <small class = "text-muted"><span id = "hint1"></span> </small>
+                                <img src="" id = "img1">
+                                <p style = "text-align:center;margin-top:18px;"><button type = "submit" class = "btn btn-outline-primary"  style = "width:50%" id = "btn1">注册</button></p>         
+                            </div> 
                             
                             </form>
                         </div>
@@ -137,7 +139,7 @@
                                     <div class="form-group">
                                     <label for="pwd">密码:</label>
                                     <small class = "text-muted">密码长度6-16位，可以包含大小写字母、数字和英文下划线</small>
-                                    <input type="password"name="pwd" id="pwd2" class = "form-control  form-control-sm" style = "width:80%" required pattern="^[\w_-]{6,16}$"
+                                    <input type="password"name="pwd" id="pwd2" class = "form-control  form-control-sm" style = "width:80%" required pattern="^[\w_-]{6,16}$" value = "{{old('pwd')}}"
                                     > 
                                     <svg class="bi bi-eye-slash" width="1em" height=".9em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style = "position: absolute;top:108px;">
                                         <path d="M13.359 11.238C15.06 9.72 16 8 16 8s-3-5.5-8-5.5a7.028 7.028 0 0 0-2.79.588l.77.771A5.944 5.944 0 0 1 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.134 13.134 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755-.165.165-.337.328-.517.486l.708.709z"/>
@@ -153,15 +155,15 @@
                                     <div class="form-group">
                                         <label for="sex">性别:</label>
                                         <small class = "text-muted">男/女</small>
-                                        <input type="text" class = "form-control form-control-sm" style = "width:80%" name="sex" id="sex" required pattern = "^[\u4e00-\u9fa5]{0,}$">
+                                        <input type="text" class = "form-control form-control-sm" style = "width:80%" name="sex" id="sex" required pattern = "^[\u4e00-\u9fa5]{0,}$" value = "{{old('sex')}}">
                                     <div class="form-group">
                                         <label for="age">年龄:</label>
                                         <small class = "text-muted">只能由数字组成</small>
-                                        <input type="text" class = "form-control form-control-sm" style = "width:80%" name="age" id="age" required pattern = "^[1-9]\d*$">
+                                        <input type="text" class = "form-control form-control-sm" style = "width:80%" name="age" id="age" required pattern = "^[1-9]\d*$" value = "{{old('age')}}">
                                     <div class="form-group">
                                         <label for="email">邮箱:</label>
                                         <small class = "text-muted">username@domain.com</small>
-                                        <input type="text" class = "form-control form-control-sm" style = "width:80%" name="email" id="email" required pattern = "^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$">
+                                        <input type="text" class = "form-control form-control-sm" style = "width:80%" name="email" id="email" required pattern = "^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$" value = "{{old('email')}}">
                                     <div class="form-group">
                                     <label for="captcha">验证码:</label>
                                     <small class = "text-muted">用于区分人和机器</small>

@@ -385,7 +385,6 @@
                             // captchaEle2.value = '';
                             hint2.style.color = 'red';
                             btn2.type = 'button';
-
                         }
                     })       
                 })

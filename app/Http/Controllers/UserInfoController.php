@@ -25,7 +25,14 @@ class UserInfoController extends Controller
             return '删除成功，请返回后刷新！';
         } else {
             return '该条数据已删除，请返回后刷新！';
+        }  
+    }
+    public function deleteAll(Request $request) {
+        $res = DB::delete('delete * from users');
+        if($res) {
+            return '已删除所有数据，请返回后刷新！';
+        } else {
+            return '所有数据已删除，请返回后刷新！';
         }
-        
     }
 }
